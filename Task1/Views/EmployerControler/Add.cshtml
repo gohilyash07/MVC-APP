@@ -1,0 +1,25 @@
+﻿@model Task1.Models.AddEmployeeViewModel
+@{
+}
+
+
+<form method="post" action="Add">
+    <div class="mb-3">
+        <label for="" class="from-label">FirstName</label>
+        <input type="text" class="form-control" asp-for="FirstName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="from-label">LastName</label>
+        <input type="text" class="form-control" asp-for="LastName">
+    </div>
+    <div class="mb-3">
+        <label for="" class="from-label">Email</label>
+        <input type="email" class="form-control" asp-for="Email">
+    </div>
+    <div class="mb-3">
+        <label for="" class="from-label">Contact</label>
+        <input type="tel" class="form-control" asp-for="Contact">
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+   
+</form>
