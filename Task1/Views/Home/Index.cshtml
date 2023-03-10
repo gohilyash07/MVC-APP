@@ -5,15 +5,17 @@
 <div class="text-center">
     <h1 class="display-4">Employee</h1>
     
-</div>
+   </div>
 <h2>MVC</h2><hr></hr>
-<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Add", "EmployerControler")'">Add Employee</button>
-<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Index1", "EmployerControler")'">View Employee</button>
+<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Add", "Employee")'">Add Employee</button>
+<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("Index1", "Employee")'">View Employee</button>
 <br>
 <br>
 <h2>WEB API</h2>
 <hr></hr>
-<button type="submit" class="btn btn-primary">Add Employee(WebApi)</button>
-<button type="submit" class="btn btn-primary">View Employee(WebApi)</button>
+<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("AddAPI", "EmployeeAddAPI")'">AddAPI Employee</button>
+<button type="submit" class="btn btn-primary" onclick="location.href='@Url.Action("PostAdd", "EmployerAPI")'">
+    ViewAPI Employee
+</button>
 
 
