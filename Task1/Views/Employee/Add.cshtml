@@ -6,20 +6,31 @@
 <form method="post" action="Add">
     <div class="mb-3">
         <label for="" class="from-label">FirstName</label>
-        <input type="text" class="form-control" asp-for="FirstName">
+        <input type="text" class="form-control"  asp-for="FirstName">
+        <span asp-validation-for="FirstName" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="" class="from-label">LastName</label>
         <input type="text" class="form-control" asp-for="LastName">
+        <span asp-validation-for="LastName" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="" class="from-label">Email</label>
         <input type="email" class="form-control" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
     </div>
     <div class="mb-3">
         <label for="" class="from-label">Contact</label>
-        <input type="tel" class="form-control" asp-for="Contact">
+        <input type="tel" class="form-control" asp-for="Contact" min="1000000000" max="9999999999"
+                             data-val-range="Phone number should be 10 digits" data-val-range-max="9999999999">
+        <span asp-validation-for="Contact" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
    
 </form>
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

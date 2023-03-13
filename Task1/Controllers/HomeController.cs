@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using Task1.Models;
-using Task1.Models.Domain;
 
 namespace Task1.Controllers
 {
@@ -23,8 +22,7 @@ namespace Task1.Controllers
         {
             return View();
         }
-        
-       
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
